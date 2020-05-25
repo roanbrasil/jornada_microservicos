@@ -17,13 +17,13 @@ public class JornadaGatewayApplication {
     public RouteLocator routes(RouteLocatorBuilder builder) {
         return builder.routes()
                 .route(p -> p
-                    .path("/produto")
+                    .path("/produto/**")
                     .filters(f -> f
                             .addRequestHeader("system-id", "101"))
                     .uri("http://localhost:8082")
                 )
                 .route(p -> p
-                        .path("/cliente")
+                        .path("/cliente/**")
                         .filters(f -> f
                                 .addRequestHeader("system-id", "101"))
                         .uri("http://localhost:8081")

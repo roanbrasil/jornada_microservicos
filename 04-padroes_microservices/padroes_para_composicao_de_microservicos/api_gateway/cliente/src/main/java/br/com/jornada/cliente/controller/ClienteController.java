@@ -1,3 +1,4 @@
+import org.springframework.web.bind.annotation.RestController;
 package br.com.jornada.cliente.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;

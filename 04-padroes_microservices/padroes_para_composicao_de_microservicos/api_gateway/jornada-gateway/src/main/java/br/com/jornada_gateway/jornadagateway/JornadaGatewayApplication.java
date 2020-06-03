@@ -12,7 +12,7 @@ public class JornadaGatewayApplication {
     public static void main(String[] args) {
         SpringApplication.run(JornadaGatewayApplication.class, args);
     }
-
+/*
     @Bean
     public RouteLocator routes(RouteLocatorBuilder builder) {
         return builder.routes()
@@ -20,14 +20,14 @@ public class JornadaGatewayApplication {
                     .path("/produto/**")
                     .filters(f -> f
                             .addRequestHeader("system-id", "101"))
-                    .uri("http://localhost:8082")
+                    .uri("http://localhost1:8082")
                 )
                 .route(p -> p
                         .path("/cliente/**")
                         .filters(f -> f
                                 .addRequestHeader("system-id", "101"))
-                        .uri("http://localhost:8081")
+                        .uri("http://localhost1:8081")
                 )
                 .build();
-    }
+    }*/
 }

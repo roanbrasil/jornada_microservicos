@@ -1,0 +1,15 @@
+server:
+  port: 8080
+
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: produto_route
+          uri: http://192.168.99.100:8082
+          predicates:
+            - Path=/produto/**
+        - id: cliente_route
+          uri: http://192.168.99.100:8081
+          predicates:
+            - Path=/produto/**

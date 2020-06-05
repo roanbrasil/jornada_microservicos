@@ -1,5 +1,5 @@
 server:
-  port: 8080
+  port: 8090
 
 spring:
   cloud:
@@ -16,7 +16,7 @@ spring:
           predicates:
             - Path=/cliente/**
         - id: pedido_route
-          #uri: http://192.168.99.100:8081
+          #uri: http://192.168.99.100:8083
           uri: http://localhost:8083
           predicates:
             - Path=/pedido/**

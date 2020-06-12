@@ -1,7 +1,8 @@
 # https://www.terraform.io/downloads.html
 
 provider "aws" {
-    region = "us-east-1"
+	#variável lida do arquivo variable.tf
+    region = "${var.aws_region}"
 }
 
 resource "aws_security_group" "ec26b60732" {

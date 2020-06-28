@@ -5,5 +5,5 @@
     <artifactId>alimentacao-system</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
-  <artifactId>gerenciamento-disponibilidade-entregadores</artifactId>
+  <artifactId>gerenciamento-disp-entregadores</artifactId>
 </project>

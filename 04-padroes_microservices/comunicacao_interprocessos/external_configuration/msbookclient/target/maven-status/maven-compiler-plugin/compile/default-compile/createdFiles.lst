@@ -1,0 +1,4 @@
+com\example\microservicebook\MicroserviceBookController.class
+com\example\microservicebook\config\EnvironmentConfig.class
+com\example\microservicebook\MicroserviceBookApplication.class
+META-INF\spring-configuration-metadata.json

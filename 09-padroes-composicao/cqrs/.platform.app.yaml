@@ -1,0 +1,10 @@
+name: app
+type: "java:11"
+disk: 1024
+hooks:
+    build: mvn clean package
+relationships:
+    mongodb: 'mongodb:mongodb'
+web:
+    commands:
+        start: java -jar $JAVA_OPTS $CREDENTIAL -Dserver.port=$PORT target/cqrs-app.jar

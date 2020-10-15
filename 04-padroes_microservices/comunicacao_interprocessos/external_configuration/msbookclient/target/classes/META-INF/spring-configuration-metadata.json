@@ -1,0 +1,22 @@
+{
+  "groups": [
+    {
+      "name": "",
+      "type": "com.example.microservicebook.config.EnvironmentConfig",
+      "sourceType": "com.example.microservicebook.config.EnvironmentConfig"
+    }
+  ],
+  "properties": [
+    {
+      "name": "host",
+      "type": "java.lang.String",
+      "sourceType": "com.example.microservicebook.config.EnvironmentConfig"
+    },
+    {
+      "name": "port",
+      "type": "java.lang.Long",
+      "sourceType": "com.example.microservicebook.config.EnvironmentConfig"
+    }
+  ],
+  "hints": []
+}

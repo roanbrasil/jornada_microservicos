@@ -1,0 +1,35 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.alimentacao</groupId>
+  <artifactId>alimentacao-system</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>pom</packaging>
+  	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.3.0.RELEASE</version>
+		<relativePath/> <!-- lookup parent from repository -->
+	</parent>
+	
+  <name>alimentacao-system</name>
+  <description>Sistema Completo de Alimentacao</description>
+  <modules>
+  	<module>ger-disponibilidade-entregadores</module>
+  	<module>ger-entregas</module>
+  	<module>ger-comandas</module>
+  	<module>gerenciamento-disponibilidade-entregadores</module>
+  	<module>gerenciamento-entregas</module>
+  	<module>gerenciamento-comandas</module>
+  	<module>gerenciamento-pedidos</module>
+  	<module>gerenciamento-clientes</module>
+  	<module>gerenciamento-dados-restaurantes</module>
+  	<module>gerenciamento-entregadores</module>
+  </modules>
+  <dependencies>
+  		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+  </dependencies>
+</project>

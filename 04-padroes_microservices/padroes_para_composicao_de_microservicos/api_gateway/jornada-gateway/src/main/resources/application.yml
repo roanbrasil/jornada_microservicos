@@ -1,0 +1,22 @@
+server:
+  port: 8090
+
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: produto_route
+          #uri: http://192.168.99.100:8082
+          uri: http://localhost:8082
+          predicates:
+            - Path=/produto/**
+        - id: cliente_route
+          #uri: http://192.168.99.100:8081
+          uri: http://localhost:8081
+          predicates:
+            - Path=/cliente/**
+        - id: pedido_route
+          #uri: http://192.168.99.100:8083
+          uri: http://localhost:8083
+          predicates:
+            - Path=/pedido/**

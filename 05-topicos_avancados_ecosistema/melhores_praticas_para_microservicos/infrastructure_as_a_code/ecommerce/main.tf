@@ -5,10 +5,19 @@ provider "aws" {
     region = var.aws_region
 }
 
+resource "aws_vpc" "e-commerce" {
+  cidr_block = "10.0.0.0/16"
+}
+
+resource "aws_subnet" "main" {
+  vpc_id     = "${aws_vpc.e-commerce.id}"
+  cidr_block = "10.0.1.0/24"
+}
+
 resource "aws_security_group" "sg-0ef3f5e1324d6769e" {
     description = "SG do e-commerce de exemplo do livro "
-    name = "sg_ecommerce"
-    vpc_id = "vpc-b3b8ffc9"
+    name = "sg_ecommerce-2"
+    vpc_id     = "${aws_vpc.e-commerce.id}"
 }
 
 resource "aws_instance" "ec224da8f4" {

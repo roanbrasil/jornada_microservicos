@@ -2,26 +2,30 @@
 
 provider "aws" {
 	#variável lida do arquivo variable.tf
-    region = "${var.aws_region}"
+    region = var.aws_region
 }
 
-resource "aws_security_group" "ec26b60732" {
-    description = "SG do e-commerce de exemplo do livro "
-    name = "sg_ecommerce"
-    vpc_id = "vpc-b3b8ffc9"
+resource "aws_vpc" "e-commerce" {
+  cidr_block = "10.0.0.0/16"
 }
 
-resource "aws_security_group" "ec2fe33695" {
+resource "aws_subnet" "main" {
+  vpc_id     = "${aws_vpc.e-commerce.id}"
+  cidr_block = "10.0.1.0/24"
+}
+
+resource "aws_security_group" "sg-0ef3f5e1324d6769e" {
     description = "SG do e-commerce de exemplo do livro "
-    name = "sg_ecommerce"
-    vpc_id = "vpc-b3b8ffc9"
+    name = "sg_ecommerce-2"
+    vpc_id     = "${aws_vpc.e-commerce.id}"
 }
 
 resource "aws_instance" "ec224da8f4" {
-    ami = "ami-09d95fab7fff3776c"
+    #ami = "ami-09d95fab7fff3776c"
+    ami = "ami-0947d2ba12ee1ff75"
     key_name = "maq-win-key"
     vpc_security_group_ids = [
-        "sg-0df8cf7a9d6559713"
+        "sg-0ef3f5e1324d6769e"
     ]
     instance_type = "t2.micro"
     tenancy = "default"
